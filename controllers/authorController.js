@@ -1,6 +1,8 @@
 import db from "../db.js";
 
-export async function getAuthorById(req, res) {
+import asyncHandler from "express-async-handler";
+
+const getAuthorById = asyncHandler(async (req, res) => {
   const { authorId } = req.params;
 
   try {
@@ -16,4 +18,6 @@ export async function getAuthorById(req, res) {
     console.error("Error retrieving author:", error);
     res.status(500).send("Internal Server Error");
   }
-}
+});
+
+export { getAuthorById };
