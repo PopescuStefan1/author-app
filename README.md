@@ -1,1 +1,3 @@
-Basic Express app to test Express router
+MVC Express App with Routes and EJS
+
+Built during the "TheOdingProject Express course"
